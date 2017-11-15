@@ -12,5 +12,4 @@ import RealmSwift
 
 class PlanetsViewController : UIViewController {
 
-    
 }
