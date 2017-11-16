@@ -391,8 +391,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YLEKY4JP87;
+				DEVELOPMENT_TEAM = 7QCVXU8T65;
 				INFOPLIST_FILE = StarPedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.omts.StarPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,8 +408,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YLEKY4JP87;
+				DEVELOPMENT_TEAM = 7QCVXU8T65;
 				INFOPLIST_FILE = StarPedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.omts.StarPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
