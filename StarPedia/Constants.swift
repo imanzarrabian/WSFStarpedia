@@ -14,6 +14,10 @@ struct Constants {
         static let base_url = "https://swapi.co/api/"
     }
     
+    struct Images {
+        static let base_url = "https://starwars.louisp.fr/"
+    }
+    
     struct Colors {
         static let backgroundColor = UIColor.yellow
     }

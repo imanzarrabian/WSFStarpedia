@@ -53,7 +53,7 @@ class ViewController: UIViewController {
                     let mass = peopleJson["mass"] as! String
                     let height = peopleJson["height"] as! String
                     
-                    let pictureURL = "http://www.jdubuzz.com/files/2015/12/landscape-1445356666-star-wars-luke-skywalker-tatooine.jpg"
+                    let pictureURL = "\(Constants.Images.base_url)heroes/\(index + 1).jpg"
                     let homeWorld = peopleJson["homeworld"] as! String
                     
                     let people = People()
@@ -74,10 +74,6 @@ class ViewController: UIViewController {
                 
                 self.getLocalHeroes()
                 self.heroesTableView.reloadData()
-                
-                for p in self.peopleArray {
-                    print(p.name + " pèse " + p.mass + "kg et mesure " + p.height + "cm")
-                }
             }
         }
     }
