@@ -223,19 +223,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yty-F0-fPh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b34-Rt-wud">
-                                        <rect key="frame" x="0.0" y="65" width="375" height="163"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b34-Rt-wud">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="A47-Yr-mEZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b34-Rt-wud" firstAttribute="leading" secondItem="aC0-MP-IPY" secondAttribute="leading" id="ErY-2b-kW7"/>
+                            <constraint firstItem="b34-Rt-wud" firstAttribute="top" secondItem="aC0-MP-IPY" secondAttribute="top" id="RYl-b1-8uS"/>
+                            <constraint firstItem="b34-Rt-wud" firstAttribute="trailing" secondItem="aC0-MP-IPY" secondAttribute="trailing" id="eaR-9t-ajP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aC0-MP-IPY"/>
                     </view>
                     <connections>
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUP-dZ-utO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2285.5999999999999" y="623.83808095952031"/>
+            <point key="canvasLocation" x="2248.8000000000002" y="623.83808095952031"/>
         </scene>
         <!--Persos-->
         <scene sceneID="Gx0-3k-Izx">
