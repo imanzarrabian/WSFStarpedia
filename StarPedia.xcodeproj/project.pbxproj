@@ -15,6 +15,9 @@
 		0F7E50491F98938800759B65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7E50471F98938800759B65 /* LaunchScreen.storyboard */; };
 		0F7E50551F98AFE200759B65 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7E50541F98AFE200759B65 /* Constants.swift */; };
 		0F7E50581F98B1F300759B65 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7E50571F98B1F300759B65 /* People.swift */; };
+		E4398F261FC5DC4B0086E41F /* PlanetDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4398F251FC5DC4B0086E41F /* PlanetDetailedController.swift */; };
+		E462E93F1FBCC59600801F60 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462E93E1FBCC59600801F60 /* Planet.swift */; };
+		E462E9411FBCC62500801F60 /* ListPlanetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462E9401FBCC62500801F60 /* ListPlanetController.swift */; };
 		F121FEF96919CA1FF19CDB33 /* Pods_StarPedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7285BDC4E22A7A3C4558D94 /* Pods_StarPedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,9 @@
 		0F7E50541F98AFE200759B65 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F7E50571F98B1F300759B65 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		59BAF859255AF15B9C96F2CA /* Pods-StarPedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarPedia/Pods-StarPedia.release.xcconfig"; sourceTree = "<group>"; };
+		E4398F251FC5DC4B0086E41F /* PlanetDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailedController.swift; sourceTree = "<group>"; };
+		E462E93E1FBCC59600801F60 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		E462E9401FBCC62500801F60 /* ListPlanetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlanetController.swift; sourceTree = "<group>"; };
 		EFCCD1A2381323A7DDDDBC44 /* Pods-StarPedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarPedia/Pods-StarPedia.debug.xcconfig"; sourceTree = "<group>"; };
 		F7285BDC4E22A7A3C4558D94 /* Pods_StarPedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarPedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				0F7E50571F98B1F300759B65 /* People.swift */,
+				E462E93E1FBCC59600801F60 /* Planet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +99,8 @@
 			children = (
 				0F7E50401F98938800759B65 /* ViewController.swift */,
 				0F54328B1F9A021B007B8C3D /* HeroDetailViewController.swift */,
+				E462E9401FBCC62500801F60 /* ListPlanetController.swift */,
+				E4398F251FC5DC4B0086E41F /* PlanetDetailedController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -249,8 +258,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F7E50581F98B1F300759B65 /* People.swift in Sources */,
+				E462E93F1FBCC59600801F60 /* Planet.swift in Sources */,
 				0F54328C1F9A021B007B8C3D /* HeroDetailViewController.swift in Sources */,
 				0F7E50411F98938800759B65 /* ViewController.swift in Sources */,
+				E462E9411FBCC62500801F60 /* ListPlanetController.swift in Sources */,
+				E4398F261FC5DC4B0086E41F /* PlanetDetailedController.swift in Sources */,
 				0F7E503F1F98938800759B65 /* AppDelegate.swift in Sources */,
 				0F7E50551F98AFE200759B65 /* Constants.swift in Sources */,
 			);
