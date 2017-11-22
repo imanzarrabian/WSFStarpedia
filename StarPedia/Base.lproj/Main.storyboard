@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -200,7 +201,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="5ek-NU-kwi"/>
                     <connections>
-                        <segue destination="d14-lT-IHd" kind="show" id="Qyi-pu-5JG"/>
+                        <outlet property="planetsTableView" destination="Qdg-e4-0QJ" id="kwW-dC-7Ne"/>
+                        <segue destination="d14-lT-IHd" kind="show" identifier="PlanetDetailVC" id="Qyi-pu-5JG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rh-hL-upj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -214,13 +216,118 @@
                     <view key="view" contentMode="scaleToFill" id="YoT-ev-LGL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8V-5S-ZEX">
+                                <rect key="frame" x="32" y="301" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUw-IO-JU8" userLabel="Population label">
+                                <rect key="frame" x="172" y="301" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txb-yM-d1g" userLabel="Rotation Period Label">
+                                <rect key="frame" x="172" y="331" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p3-80-6eK" userLabel="Orbital Period Label">
+                                <rect key="frame" x="171" y="362" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jt6-4A-aHz" userLabel="Diameter Label">
+                                <rect key="frame" x="172" y="391" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRl-Gx-yCG" userLabel="Climate Label">
+                                <rect key="frame" x="172" y="420" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-88-qta">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="RWo-sk-yuZ"/>
+                                    <constraint firstAttribute="width" constant="375" id="aQZ-Og-ER7"/>
+                                    <constraint firstAttribute="width" secondItem="0Ds-88-qta" secondAttribute="height" multiplier="15:8" id="h8y-rg-CD7"/>
+                                    <constraint firstAttribute="height" constant="200" id="raV-lx-GOE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rotation period : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKV-4I-j67">
+                                <rect key="frame" x="32" y="331" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orbital period : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEN-Tp-Lbs">
+                                <rect key="frame" x="32" y="362" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diameter : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUb-oC-Ywt">
+                                <rect key="frame" x="32" y="391" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Climate : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONL-ob-nM2">
+                                <rect key="frame" x="32" y="420" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lUw-IO-JU8" firstAttribute="trailing" secondItem="kRl-Gx-yCG" secondAttribute="trailing" id="26C-Cc-pzK"/>
+                            <constraint firstItem="h8V-5S-ZEX" firstAttribute="top" secondItem="0Ds-88-qta" secondAttribute="bottom" constant="37" id="2Tp-CX-6lX"/>
+                            <constraint firstItem="lUw-IO-JU8" firstAttribute="leading" secondItem="kRl-Gx-yCG" secondAttribute="leading" id="782-xk-aFq"/>
+                            <constraint firstItem="kRl-Gx-yCG" firstAttribute="top" secondItem="Jt6-4A-aHz" secondAttribute="bottom" constant="8" symbolic="YES" id="7dL-Pq-nkb"/>
+                            <constraint firstItem="lUw-IO-JU8" firstAttribute="leading" secondItem="iOY-JR-lC6" secondAttribute="leading" constant="172" id="9Er-IH-7cJ"/>
+                            <constraint firstItem="iOY-JR-lC6" firstAttribute="trailing" secondItem="lUw-IO-JU8" secondAttribute="trailing" constant="59" id="9fd-gr-EyN"/>
+                            <constraint firstItem="lUw-IO-JU8" firstAttribute="trailing" secondItem="txb-yM-d1g" secondAttribute="trailing" id="CYP-TN-Vsr"/>
+                            <constraint firstItem="0p3-80-6eK" firstAttribute="leading" secondItem="iOY-JR-lC6" secondAttribute="leading" constant="171" id="HIN-k1-SFM"/>
+                            <constraint firstItem="lUw-IO-JU8" firstAttribute="leading" secondItem="txb-yM-d1g" secondAttribute="leading" id="KEH-uU-mdt"/>
+                            <constraint firstItem="lUw-IO-JU8" firstAttribute="trailing" secondItem="Jt6-4A-aHz" secondAttribute="trailing" id="PdP-df-FHM"/>
+                            <constraint firstItem="iOY-JR-lC6" firstAttribute="trailing" secondItem="h8V-5S-ZEX" secondAttribute="trailing" constant="199" id="Px9-W0-NN5"/>
+                            <constraint firstItem="lUw-IO-JU8" firstAttribute="leading" secondItem="Jt6-4A-aHz" secondAttribute="leading" id="RkK-aO-gxW"/>
+                            <constraint firstItem="0Ds-88-qta" firstAttribute="top" secondItem="iOY-JR-lC6" secondAttribute="top" id="U6e-41-usY"/>
+                            <constraint firstItem="0Ds-88-qta" firstAttribute="leading" secondItem="YoT-ev-LGL" secondAttribute="leading" id="a8R-ez-cFA"/>
+                            <constraint firstAttribute="bottom" secondItem="Jt6-4A-aHz" secondAttribute="bottom" constant="255" id="aDu-PK-dLa"/>
+                            <constraint firstItem="txb-yM-d1g" firstAttribute="top" secondItem="h8V-5S-ZEX" secondAttribute="bottom" constant="9" id="c5K-Rh-T90"/>
+                            <constraint firstItem="iOY-JR-lC6" firstAttribute="trailing" secondItem="0p3-80-6eK" secondAttribute="trailing" constant="60" id="ext-Bc-DPj"/>
+                            <constraint firstItem="Jt6-4A-aHz" firstAttribute="top" secondItem="0p3-80-6eK" secondAttribute="bottom" constant="8" symbolic="YES" id="lxt-gx-GNL"/>
+                            <constraint firstItem="h8V-5S-ZEX" firstAttribute="baseline" secondItem="lUw-IO-JU8" secondAttribute="baseline" id="uAm-Ni-GxY"/>
+                            <constraint firstItem="h8V-5S-ZEX" firstAttribute="leading" secondItem="iOY-JR-lC6" secondAttribute="leading" constant="32" id="us8-ZP-Ar4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iOY-JR-lC6"/>
                     </view>
+                    <connections>
+                        <outlet property="avatar" destination="0Ds-88-qta" id="a3O-pa-Ora"/>
+                        <outlet property="climateLabel" destination="kRl-Gx-yCG" id="fMO-Ov-md5"/>
+                        <outlet property="diameterLabel" destination="Jt6-4A-aHz" id="9g5-Ir-Ka8"/>
+                        <outlet property="orbitalPeriodLabel" destination="0p3-80-6eK" id="i4m-r8-oOE"/>
+                        <outlet property="populationLabel" destination="lUw-IO-JU8" id="YOf-cR-a8p"/>
+                        <outlet property="rotationPeriodLabel" destination="txb-yM-d1g" id="6mO-d1-c0e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEh-US-oDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2249" y="624"/>
+            <point key="canvasLocation" x="2248.8000000000002" y="623.83808095952031"/>
         </scene>
         <!--Persos-->
         <scene sceneID="Gx0-3k-Izx">
