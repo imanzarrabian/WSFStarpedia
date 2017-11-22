@@ -26,6 +26,9 @@ class HeroDetailViewController: UIViewController {
         getPlanet(url: people.homeWorld)
     }
     
+    @IBOutlet weak var planetView: UIView!
+    
+    
     var people: People!
     var planet = Planet()
     
@@ -33,11 +36,8 @@ class HeroDetailViewController: UIViewController {
         super.viewDidLoad()
         title = people.name
         
-        // Hide labels for planet
-        planetNameLabel.isHidden = true
-        planetRotationPeriodLabel.isHidden = true
-        planetOrbitalPeriodLabel.isHidden = true
-        planetDiameterLabel.isHidden = true
+        // Hide planet's view
+        planetView.isHidden = true
         
         massLabel.text = people.mass + " Kg"
         heightLabel.text = people.height + " Cm"
@@ -69,16 +69,11 @@ class HeroDetailViewController: UIViewController {
     }
     
     func populateView() {
+        self.planetView.isHidden = false
+        
         self.planetNameLabel.text = self.planet.name
-        self.planetNameLabel.isHidden = false
-        
         self.planetRotationPeriodLabel.text = self.planet.rotation_period + " days"
-        self.planetRotationPeriodLabel.isHidden = false
-        
         self.planetOrbitalPeriodLabel.text = self.planet.orbital_period + " hours"
-        self.planetOrbitalPeriodLabel.isHidden = false
-        
         self.planetDiameterLabel.text = self.planet.diameter + " kilometres"
-        self.planetDiameterLabel.isHidden = false
     }
 }
