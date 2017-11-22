@@ -74,10 +74,6 @@ class ViewController: UIViewController {
                 
                 self.getLocalHeroes()
                 self.heroesTableView.reloadData()
-                
-                for p in self.peopleArray {
-                    print(p.name + " pèse " + p.mass + "kg et mesure " + p.height + "cm")
-                }
             }
         }
     }
