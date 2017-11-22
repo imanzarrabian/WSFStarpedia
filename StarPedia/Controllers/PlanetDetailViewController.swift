@@ -14,6 +14,7 @@ class PlanetDetailViewController: UIViewController {
     @IBOutlet weak var pictureIV: UIImageView!
     @IBOutlet weak var rotationPeriodLabel: UILabel!
     @IBOutlet weak var orbitalPerdiodLabel: UILabel!
+    @IBOutlet weak var diameterLabel: UILabel!
     
     var planet: Planet!
     
@@ -23,6 +24,8 @@ class PlanetDetailViewController: UIViewController {
         
         rotationPeriodLabel.text = planet.rotation_period + " days"
         orbitalPerdiodLabel.text = planet.orbital_period + " hours"
+        
+        diameterLabel.text = planet.diameter + " kilometres"
 
         let url = URL(string: planet.pictureURL)
                 pictureIV.kf.setImage(with: url)

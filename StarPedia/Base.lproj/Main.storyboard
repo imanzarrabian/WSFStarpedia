@@ -241,15 +241,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJQ-dU-biq">
-                                <rect key="frame" x="160" y="284" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJQ-dU-biq">
+                                <rect key="frame" x="160" y="284" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXV-4e-FDj">
-                                <rect key="frame" x="160" y="323" width="199" height="21"/>
+                                <rect key="frame" x="160" y="323" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxJ-Lt-Y7o">
+                                <rect key="frame" x="160" y="358" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diameter :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEe-73-JYz">
+                                <rect key="frame" x="16" y="358" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -257,20 +269,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ojw-0E-q0R" firstAttribute="leading" secondItem="GlT-lv-7Yq" secondAttribute="leading" id="0Du-Xc-JN3"/>
+                            <constraint firstItem="WEe-73-JYz" firstAttribute="top" secondItem="Ojw-0E-q0R" secondAttribute="bottom" constant="16" id="6Gn-w8-h6J"/>
                             <constraint firstItem="Ojw-0E-q0R" firstAttribute="top" secondItem="GlT-lv-7Yq" secondAttribute="bottom" constant="16" id="ANw-l3-NdO"/>
                             <constraint firstItem="b34-Rt-wud" firstAttribute="leading" secondItem="aC0-MP-IPY" secondAttribute="leading" id="ErY-2b-kW7"/>
                             <constraint firstItem="b34-Rt-wud" firstAttribute="top" secondItem="aC0-MP-IPY" secondAttribute="top" id="RYl-b1-8uS"/>
+                            <constraint firstItem="WEe-73-JYz" firstAttribute="baseline" secondItem="ZxJ-Lt-Y7o" secondAttribute="baseline" id="U9x-U2-OSw"/>
                             <constraint firstItem="GlT-lv-7Yq" firstAttribute="top" secondItem="b34-Rt-wud" secondAttribute="bottom" constant="20" id="cNO-Jy-2Yi"/>
                             <constraint firstItem="b34-Rt-wud" firstAttribute="trailing" secondItem="aC0-MP-IPY" secondAttribute="trailing" id="eaR-9t-ajP"/>
                             <constraint firstItem="GlT-lv-7Yq" firstAttribute="leading" secondItem="aC0-MP-IPY" secondAttribute="leading" constant="16" id="efR-Z6-xzy"/>
                             <constraint firstItem="yJQ-dU-biq" firstAttribute="centerY" secondItem="GlT-lv-7Yq" secondAttribute="centerY" id="nJ4-Uv-g4U"/>
                             <constraint firstItem="eXV-4e-FDj" firstAttribute="leading" secondItem="Ojw-0E-q0R" secondAttribute="trailing" constant="21" id="nTv-28-fyH"/>
                             <constraint firstItem="Ojw-0E-q0R" firstAttribute="baseline" secondItem="eXV-4e-FDj" secondAttribute="baseline" id="q4z-sa-uQx"/>
+                            <constraint firstItem="ZxJ-Lt-Y7o" firstAttribute="leading" secondItem="WEe-73-JYz" secondAttribute="trailing" constant="59" id="t34-0d-FFF"/>
                             <constraint firstItem="yJQ-dU-biq" firstAttribute="leading" secondItem="GlT-lv-7Yq" secondAttribute="trailing" constant="8" id="unw-Dj-GEU"/>
+                            <constraint firstItem="WEe-73-JYz" firstAttribute="leading" secondItem="Ojw-0E-q0R" secondAttribute="leading" id="zGJ-N9-nW4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aC0-MP-IPY"/>
                     </view>
                     <connections>
+                        <outlet property="diameterLabel" destination="ZxJ-Lt-Y7o" id="kN7-XF-kL9"/>
                         <outlet property="orbitalPerdiodLabel" destination="eXV-4e-FDj" id="ULt-8n-XWG"/>
                         <outlet property="pictureIV" destination="b34-Rt-wud" id="bqj-O5-91l"/>
                         <outlet property="rotationPeriodLabel" destination="yJQ-dU-biq" id="PxA-zF-uQ3"/>
