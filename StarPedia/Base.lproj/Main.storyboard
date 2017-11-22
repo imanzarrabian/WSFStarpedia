@@ -218,37 +218,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8V-5S-ZEX">
-                                <rect key="frame" x="32" y="301" width="144" height="21"/>
+                                <rect key="frame" x="32" y="301" width="94.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUw-IO-JU8" userLabel="Population label">
-                                <rect key="frame" x="172" y="301" width="144" height="21"/>
+                                <rect key="frame" x="172" y="301" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txb-yM-d1g" userLabel="Rotation Period Label">
-                                <rect key="frame" x="172" y="331" width="144" height="21"/>
+                                <rect key="frame" x="172" y="331" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p3-80-6eK" userLabel="Orbital Period Label">
-                                <rect key="frame" x="171" y="362" width="144" height="21"/>
+                                <rect key="frame" x="171" y="362" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jt6-4A-aHz" userLabel="Diameter Label">
-                                <rect key="frame" x="172" y="391" width="144" height="21"/>
+                                <rect key="frame" x="172" y="391" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRl-Gx-yCG" userLabel="Climate Label">
-                                <rect key="frame" x="172" y="420" width="144" height="21"/>
+                                <rect key="frame" x="172" y="420" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -298,18 +298,15 @@
                             <constraint firstItem="lUw-IO-JU8" firstAttribute="leading" secondItem="kRl-Gx-yCG" secondAttribute="leading" id="782-xk-aFq"/>
                             <constraint firstItem="kRl-Gx-yCG" firstAttribute="top" secondItem="Jt6-4A-aHz" secondAttribute="bottom" constant="8" symbolic="YES" id="7dL-Pq-nkb"/>
                             <constraint firstItem="lUw-IO-JU8" firstAttribute="leading" secondItem="iOY-JR-lC6" secondAttribute="leading" constant="172" id="9Er-IH-7cJ"/>
-                            <constraint firstItem="iOY-JR-lC6" firstAttribute="trailing" secondItem="lUw-IO-JU8" secondAttribute="trailing" constant="59" id="9fd-gr-EyN"/>
                             <constraint firstItem="lUw-IO-JU8" firstAttribute="trailing" secondItem="txb-yM-d1g" secondAttribute="trailing" id="CYP-TN-Vsr"/>
                             <constraint firstItem="0p3-80-6eK" firstAttribute="leading" secondItem="iOY-JR-lC6" secondAttribute="leading" constant="171" id="HIN-k1-SFM"/>
                             <constraint firstItem="lUw-IO-JU8" firstAttribute="leading" secondItem="txb-yM-d1g" secondAttribute="leading" id="KEH-uU-mdt"/>
                             <constraint firstItem="lUw-IO-JU8" firstAttribute="trailing" secondItem="Jt6-4A-aHz" secondAttribute="trailing" id="PdP-df-FHM"/>
-                            <constraint firstItem="iOY-JR-lC6" firstAttribute="trailing" secondItem="h8V-5S-ZEX" secondAttribute="trailing" constant="199" id="Px9-W0-NN5"/>
                             <constraint firstItem="lUw-IO-JU8" firstAttribute="leading" secondItem="Jt6-4A-aHz" secondAttribute="leading" id="RkK-aO-gxW"/>
                             <constraint firstItem="0Ds-88-qta" firstAttribute="top" secondItem="iOY-JR-lC6" secondAttribute="top" id="U6e-41-usY"/>
                             <constraint firstItem="0Ds-88-qta" firstAttribute="leading" secondItem="YoT-ev-LGL" secondAttribute="leading" id="a8R-ez-cFA"/>
                             <constraint firstAttribute="bottom" secondItem="Jt6-4A-aHz" secondAttribute="bottom" constant="255" id="aDu-PK-dLa"/>
                             <constraint firstItem="txb-yM-d1g" firstAttribute="top" secondItem="h8V-5S-ZEX" secondAttribute="bottom" constant="9" id="c5K-Rh-T90"/>
-                            <constraint firstItem="iOY-JR-lC6" firstAttribute="trailing" secondItem="0p3-80-6eK" secondAttribute="trailing" constant="60" id="ext-Bc-DPj"/>
                             <constraint firstItem="Jt6-4A-aHz" firstAttribute="top" secondItem="0p3-80-6eK" secondAttribute="bottom" constant="8" symbolic="YES" id="lxt-gx-GNL"/>
                             <constraint firstItem="h8V-5S-ZEX" firstAttribute="baseline" secondItem="lUw-IO-JU8" secondAttribute="baseline" id="uAm-Ni-GxY"/>
                             <constraint firstItem="h8V-5S-ZEX" firstAttribute="leading" secondItem="iOY-JR-lC6" secondAttribute="leading" constant="32" id="us8-ZP-Ar4"/>
