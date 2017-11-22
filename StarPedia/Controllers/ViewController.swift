@@ -5,13 +5,12 @@
 //  Created by Iman Zarrabian on 19/10/2017.
 //  Copyright © 2017 WSF. All rights reserved.
 //
-
 import UIKit
 import Alamofire
 import RealmSwift
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var heroesTableView: UITableView!
     var peopleArray: [People] = []
     
@@ -46,7 +45,7 @@ class ViewController: UIViewController {
                 //MAPING
                 //tableau de [String : Any] VERS tableau de People
                 //[[String : Any]] VERS [People]
-            
+                
                 for (index, peopleJson) in heroesArray.enumerated() {
                     
                     let name = peopleJson["name"] as! String
@@ -74,6 +73,10 @@ class ViewController: UIViewController {
                 
                 self.getLocalHeroes()
                 self.heroesTableView.reloadData()
+                
+                for p in self.peopleArray {
+                    print(p.name + " pèse " + p.mass + "kg et mesure " + p.height + "cm")
+                }
             }
         }
     }
@@ -110,7 +113,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let people = peopleArray[indexPath.row]
         cell.textLabel?.text = people.name
-
+        
         return cell
     }
     
@@ -118,15 +121,3 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
