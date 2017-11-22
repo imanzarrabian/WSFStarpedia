@@ -141,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrj-H1-oTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2248.8000000000002" y="-144.3778110944528"/>
+            <point key="canvasLocation" x="2228" y="-144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ikg-0W-6G6">
@@ -190,6 +190,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="usp-0i-R5K" kind="show" identifier="PlanetSegue" id="4ku-Mb-EtX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -210,7 +213,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rh-hL-upj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429.5999999999999" y="623.83808095952031"/>
+            <point key="canvasLocation" x="1430" y="624"/>
+        </scene>
+        <!--Planet Detailed View Controller-->
+        <scene sceneID="viU-Mc-vvP">
+            <objects>
+                <viewController id="usp-0i-R5K" customClass="PlanetDetailedViewController" customModule="StarPedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7V2-Gy-WaE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STm-NP-o1m">
+                                <rect key="frame" x="52" y="139" width="189" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="xKY-Ru-J73"/>
+                    </view>
+                    <connections>
+                        <outlet property="diameterLabel" destination="STm-NP-o1m" id="jw6-Ox-sEi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOe-H4-emb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="623.83808095952031"/>
         </scene>
         <!--Persos-->
         <scene sceneID="Gx0-3k-Izx">

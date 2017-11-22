@@ -12,6 +12,7 @@ import RealmSwift
 class Planet: Object {
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String = ""
+    @objc dynamic var diameter: String = ""
 
     override static func primaryKey() -> String? {
         return "id"
