@@ -15,6 +15,9 @@
 		0F7E50491F98938800759B65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7E50471F98938800759B65 /* LaunchScreen.storyboard */; };
 		0F7E50551F98AFE200759B65 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7E50541F98AFE200759B65 /* Constants.swift */; };
 		0F7E50581F98B1F300759B65 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7E50571F98B1F300759B65 /* People.swift */; };
+		BF897B701FBF819900272D92 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF897B6F1FBF819900272D92 /* Planet.swift */; };
+		BF897B721FBF828900272D92 /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF897B711FBF828900272D92 /* PlanetsViewController.swift */; };
+		BF897B741FBF847D00272D92 /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF897B731FBF847D00272D92 /* PlanetDetailViewController.swift */; };
 		F121FEF96919CA1FF19CDB33 /* Pods_StarPedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7285BDC4E22A7A3C4558D94 /* Pods_StarPedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,9 @@
 		0F7E50541F98AFE200759B65 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F7E50571F98B1F300759B65 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		59BAF859255AF15B9C96F2CA /* Pods-StarPedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarPedia/Pods-StarPedia.release.xcconfig"; sourceTree = "<group>"; };
+		BF897B6F1FBF819900272D92 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		BF897B711FBF828900272D92 /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
+		BF897B731FBF847D00272D92 /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
 		EFCCD1A2381323A7DDDDBC44 /* Pods-StarPedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarPedia/Pods-StarPedia.debug.xcconfig"; sourceTree = "<group>"; };
 		F7285BDC4E22A7A3C4558D94 /* Pods_StarPedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarPedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				0F7E50571F98B1F300759B65 /* People.swift */,
+				BF897B6F1FBF819900272D92 /* Planet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,7 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				0F7E50401F98938800759B65 /* ViewController.swift */,
+				BF897B711FBF828900272D92 /* PlanetsViewController.swift */,
 				0F54328B1F9A021B007B8C3D /* HeroDetailViewController.swift */,
+				BF897B731FBF847D00272D92 /* PlanetDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,8 +259,11 @@
 			files = (
 				0F7E50581F98B1F300759B65 /* People.swift in Sources */,
 				0F54328C1F9A021B007B8C3D /* HeroDetailViewController.swift in Sources */,
+				BF897B721FBF828900272D92 /* PlanetsViewController.swift in Sources */,
 				0F7E50411F98938800759B65 /* ViewController.swift in Sources */,
+				BF897B701FBF819900272D92 /* Planet.swift in Sources */,
 				0F7E503F1F98938800759B65 /* AppDelegate.swift in Sources */,
+				BF897B741FBF847D00272D92 /* PlanetDetailViewController.swift in Sources */,
 				0F7E50551F98AFE200759B65 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,8 +403,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YLEKY4JP87;
+				DEVELOPMENT_TEAM = 7QCVXU8T65;
 				INFOPLIST_FILE = StarPedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.omts.StarPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,8 +420,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YLEKY4JP87;
+				DEVELOPMENT_TEAM = 7QCVXU8T65;
 				INFOPLIST_FILE = StarPedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.omts.StarPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
