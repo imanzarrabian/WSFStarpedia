@@ -133,7 +133,14 @@ open class Object: RLMObjectBase, ThreadConfined, RealmCollectionValue {
 
     /**
      WARNING: This is an internal helper method not intended for public use.
-     It is not considered part of the public API.
+     :nodoc:
+     */
+    public override final class func className() -> String {
+        return super.className()
+    }
+
+    /**
+     WARNING: This is an internal helper method not intended for public use.
      :nodoc:
      */
     public override final class func objectUtilClass(_ isSwift: Bool) -> AnyClass {
@@ -463,7 +470,7 @@ public class ObjectUtil: NSObject {
 
     // Build optional property metadata for a given property.
     // swiftlint:disable:next cyclomatic_complexity
-    private static func getOptionalPropertyMetadata(for child: Mirror.Child, at index: Int) -> RLMSwiftPropertyMetadata? {
+    private static func getOptionalPropertyMetadata(for child: Mirror.Child, at index: Int) -> RLMGenericPropertyMetadata? {
         guard let name = child.label else {
             return nil
         }
@@ -494,26 +501,26 @@ public class ObjectUtil: NSObject {
             throwRealmException("'\(type)' is not a valid RealmOptional type.")
             code = .int // ignored
         } else if mirror.displayStyle == .optional || type is ExpressibleByNilLiteral.Type {
-            return RLMSwiftPropertyMetadata(forNilLiteralOptionalProperty: name)
+            return RLMGenericPropertyMetadata(forNilLiteralOptionalProperty: name, index: index)
         } else {
             return nil
         }
-        return RLMSwiftPropertyMetadata(forOptionalProperty: name, type: code)
+        return RLMGenericPropertyMetadata(forOptionalProperty: name, type: Int(code.rawValue), index: index)
     }
 
-    @objc private class func getSwiftProperties(_ object: Any) -> [RLMSwiftPropertyMetadata] {
+    @objc private class func getSwiftGenericProperties(_ object: Any) -> [RLMGenericPropertyMetadata] {
         return getNonIgnoredMirrorChildren(for: object).enumerated().flatMap { idx, prop in
             if let value = prop.value as? LinkingObjectsBase {
-                return RLMSwiftPropertyMetadata(forLinkingObjectsProperty: prop.label!,
-                                                className: value.objectClassName,
-                                                linkedPropertyName: value.propertyName)
+                return RLMGenericPropertyMetadata(forLinkingObjectsProperty: prop.label!,
+                                                  className: value.objectClassName,
+                                                  linkedPropertyName: value.propertyName,
+                                                  index: idx)
             } else if prop.value is RLMListBase {
-                return RLMSwiftPropertyMetadata(forListProperty: prop.label!)
+                return RLMGenericPropertyMetadata(forListProperty: prop.label!, index: idx)
             } else if let optional = getOptionalPropertyMetadata(for: prop, at: idx) {
                 return optional
-            } else {
-                return RLMSwiftPropertyMetadata(forOtherProperty: prop.label!)
             }
+            return nil
         }
     }
 
