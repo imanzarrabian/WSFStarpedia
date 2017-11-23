@@ -101,10 +101,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAb-lv-WdS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAb-lv-WdS">
                                 <rect key="frame" x="16" y="357" width="204" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20796394065441937" green="0.12306378974339903" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="G2C-ei-bSY"/>
+                                    <constraint firstAttribute="width" constant="204" id="Uqb-7G-UFL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Show hero's planet">
                                     <color key="titleColor" red="0.98657952500000001" green="1" blue="0.99282957979999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,9 +116,8 @@
                                     <action selector="togglePlanet:" destination="haN-67-MHJ" eventType="touchUpInside" id="vz9-d4-Pcl"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZK-3m-POM">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZK-3m-POM">
                                 <rect key="frame" x="16" y="403" width="343" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxH-g8-GeI">
                                         <rect key="frame" x="144" y="31" width="115" height="21"/>
@@ -168,10 +170,15 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="cAG-Sl-xKu"/>
+                                    <constraint firstAttribute="width" constant="343" id="i2Y-ZK-97W"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XZK-3m-POM" firstAttribute="top" secondItem="PAb-lv-WdS" secondAttribute="bottom" constant="8" id="089-MI-4qB"/>
                             <constraint firstItem="UEh-cE-vjy" firstAttribute="leading" secondItem="IkA-YK-HBq" secondAttribute="trailing" constant="8" id="0l4-k9-T3J"/>
                             <constraint firstItem="yM3-64-Nk4" firstAttribute="trailing" secondItem="wOw-ha-5LR" secondAttribute="trailing" id="0x3-P1-zNr"/>
                             <constraint firstItem="yM3-64-Nk4" firstAttribute="leading" secondItem="wOw-ha-5LR" secondAttribute="leading" id="1lM-2C-H3E"/>
@@ -179,11 +186,14 @@
                             <constraint firstItem="mxd-0Z-ZW9" firstAttribute="leading" secondItem="4qm-Tb-3U5" secondAttribute="trailing" constant="19" id="A79-Tq-sSp"/>
                             <constraint firstItem="UEh-cE-vjy" firstAttribute="centerY" secondItem="IkA-YK-HBq" secondAttribute="centerY" id="BrR-Xp-ZJC"/>
                             <constraint firstItem="IkA-YK-HBq" firstAttribute="leading" secondItem="4qm-Tb-3U5" secondAttribute="leading" id="O8S-f4-IMT"/>
+                            <constraint firstItem="PAb-lv-WdS" firstAttribute="top" secondItem="IkA-YK-HBq" secondAttribute="bottom" constant="15.5" id="RJR-zY-L4H"/>
                             <constraint firstItem="mxd-0Z-ZW9" firstAttribute="centerY" secondItem="4qm-Tb-3U5" secondAttribute="centerY" id="SJV-zh-Fdw"/>
                             <constraint firstItem="IkA-YK-HBq" firstAttribute="top" secondItem="4qm-Tb-3U5" secondAttribute="bottom" constant="16" id="TX1-II-e3O"/>
                             <constraint firstItem="yM3-64-Nk4" firstAttribute="top" secondItem="wOw-ha-5LR" secondAttribute="top" id="Xze-3C-y6K"/>
                             <constraint firstItem="UEh-cE-vjy" firstAttribute="centerX" secondItem="mxd-0Z-ZW9" secondAttribute="centerX" id="mq3-4Z-ftI"/>
+                            <constraint firstItem="XZK-3m-POM" firstAttribute="leading" secondItem="PAb-lv-WdS" secondAttribute="leading" id="ppj-4g-EJP"/>
                             <constraint firstItem="4qm-Tb-3U5" firstAttribute="top" secondItem="yM3-64-Nk4" secondAttribute="bottom" constant="20" id="r6K-ax-2kt"/>
+                            <constraint firstItem="PAb-lv-WdS" firstAttribute="leading" secondItem="IkA-YK-HBq" secondAttribute="leading" id="uZT-oa-wDz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wOw-ha-5LR"/>
                     </view>
@@ -282,7 +292,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b34-Rt-wud">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b34-Rt-wud">
                                 <rect key="frame" x="0.0" y="64" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="A47-Yr-mEZ"/>
