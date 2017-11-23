@@ -54,7 +54,7 @@ class PlanetViewController: UIViewController {
                     let diameter = planetsJson["diameter"] as! String
                     let population = planetsJson["population"] as! String
                     
-                    let pictureURL = "http://www.jdubuzz.com/files/2015/12/landscape-1445356666-star-wars-luke-skywalker-tatooine.jpg"
+                    let pictureURL = "https://img15.hostingpics.net/pics/954612PlanteVegeta.jpg"
                     
                     let planets = Planets()
                     planets.id = index + 1
