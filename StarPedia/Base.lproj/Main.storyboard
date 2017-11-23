@@ -192,6 +192,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="d14-lT-IHd" kind="show" identifier="PlanetDetailVC" id="ICx-at-5g9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -202,7 +205,6 @@
                     <navigationItem key="navigationItem" id="5ek-NU-kwi"/>
                     <connections>
                         <outlet property="planetsTableView" destination="Qdg-e4-0QJ" id="kwW-dC-7Ne"/>
-                        <segue destination="d14-lT-IHd" kind="show" identifier="PlanetDetailVC" id="Qyi-pu-5JG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rh-hL-upj" userLabel="First Responder" sceneMemberID="firstResponder"/>
