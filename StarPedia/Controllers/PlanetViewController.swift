@@ -82,25 +82,25 @@ class PlanetViewController: UIViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "HeroDetailVC" {
-//
-//            //1 - Je me sers du sender pour obtenir la cellule tappée
-//            let cell = sender as! UITableViewCell
-//
-//            //2 - Je trouve l'index de cette cellule dans la tableView
-//            let index = heroesTableView.indexPath(for: cell)!.row
-//
-//            //3 - Je trouve le people dans le tabeau de people
-//            let selectedHero = self.peopleArray[index]
-//
-//            //4 - et je le passe au hero detail view controller
-//            let destVC = segue.destination as! HeroDetailViewController
-//
-//            destVC.people = selectedHero //ICI QUE TOUT SE PASSE
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "PlanetsDetailVC" {
+
+            //1 - Je me sers du sender pour obtenir la cellule tappée
+            let cell = sender as! UITableViewCell
+
+            //2 - Je trouve l'index de cette cellule dans la tableView
+            let index = PlanetsTableView.indexPath(for: cell)!.row
+
+            //3 - Je trouve le people dans le tabeau de people
+            let selectedPlanet = self.planetsArray[index]
+
+            //4 - et je le passe au hero detail view controller
+            let destVC = segue.destination as! PlanetDetailViewController
+
+            destVC.planets = selectedPlanet //ICI QUE TOUT SE PASSE
+        }
+    }
 }
 
 extension PlanetViewController: UITableViewDelegate, UITableViewDataSource {

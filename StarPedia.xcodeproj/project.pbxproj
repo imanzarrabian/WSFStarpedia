@@ -18,6 +18,7 @@
 		F121FEF96919CA1FF19CDB33 /* Pods_StarPedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7285BDC4E22A7A3C4558D94 /* Pods_StarPedia.framework */; };
 		FC687B131FC5F70D0084804E /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC687B121FC5F70D0084804E /* Planet.swift */; };
 		FC687B151FC5FF450084804E /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC687B141FC5FF450084804E /* PlanetViewController.swift */; };
+		FC687B171FC72BCE0084804E /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC687B161FC72BCE0084804E /* PlanetDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F7285BDC4E22A7A3C4558D94 /* Pods_StarPedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarPedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC687B121FC5F70D0084804E /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		FC687B141FC5FF450084804E /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
+		FC687B161FC72BCE0084804E /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				0F7E50401F98938800759B65 /* ViewController.swift */,
 				0F54328B1F9A021B007B8C3D /* HeroDetailViewController.swift */,
 				FC687B141FC5FF450084804E /* PlanetViewController.swift */,
+				FC687B161FC72BCE0084804E /* PlanetDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				0F7E50581F98B1F300759B65 /* People.swift in Sources */,
 				0F54328C1F9A021B007B8C3D /* HeroDetailViewController.swift in Sources */,
+				FC687B171FC72BCE0084804E /* PlanetDetailViewController.swift in Sources */,
 				FC687B151FC5FF450084804E /* PlanetViewController.swift in Sources */,
 				0F7E50411F98938800759B65 /* ViewController.swift in Sources */,
 				FC687B131FC5F70D0084804E /* Planet.swift in Sources */,
