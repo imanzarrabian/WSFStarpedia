@@ -370,7 +370,7 @@
         <scene sceneID="Gx0-3k-Izx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rjW-Ol-3us" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Persos" id="sdF-R9-N3e"/>
+                    <tabBarItem key="tabBarItem" title="Persos" image="hero-icon" id="sdF-R9-N3e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XUZ-9g-YeJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -389,7 +389,7 @@
         <scene sceneID="zBT-Wn-DdX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Si-VI-WgN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Planets" id="m8h-lX-rcL"/>
+                    <tabBarItem key="tabBarItem" title="Planets" image="planet-icon" id="m8h-lX-rcL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wUc-vA-Czg">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -405,4 +405,8 @@
             <point key="canvasLocation" x="576" y="624.28785607196403"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hero-icon" width="30" height="30"/>
+        <image name="planet-icon" width="30" height="30"/>
+    </resources>
 </document>
