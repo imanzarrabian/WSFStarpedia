@@ -23,18 +23,18 @@ class PlanetsViewController: UIViewController {
         planetsTableView.dataSource = self
         
         //affichage des données locales
-        getLocalHeroes()
+        getLocalPlanets()
         
         //appel du WS avec alamofire
-        getHeroes()
+        getPlanets()
     }
     
-    func getLocalHeroes() {
+    func getLocalPlanets() {
         let realm = try! Realm()
         planetsArray = Array(realm.objects(Planet.self))
     }
     
-    func getHeroes() {
+    func getPlanets() {
         let path = "planets"
         
         Alamofire.request(Constants.Api.base_url + path).responseJSON { (response) in
@@ -48,12 +48,12 @@ class PlanetsViewController: UIViewController {
                 //tableau de [String : Any] VERS tableau de People
                 //[[String : Any]] VERS [People]
                 
-                for (index, peopleJson) in planetsArray.enumerated() {
+                for (index, planetJson) in planetsArray.enumerated() {
                     
-                    let name = peopleJson["name"] as! String
-                    let rotation_period = peopleJson["rotation_period"] as! String
-                    let orbital_period = peopleJson["orbital_period"] as! String
-                    let diameter = peopleJson["diameter"] as! String
+                    let name = planetJson["name"] as! String
+                    let rotation_period = planetJson["rotation_period"] as! String
+                    let orbital_period = planetJson["orbital_period"] as! String
+                    let diameter = planetJson["diameter"] as! String
                     
                     let pictureURL = "\(Constants.Images.base_url)planets/\(index + 1).jpg"
                     
@@ -73,7 +73,7 @@ class PlanetsViewController: UIViewController {
                     }
                 }
                 
-                self.getLocalHeroes()
+                self.getLocalPlanets()
                 self.planetsTableView.reloadData()
             }
         }
@@ -90,12 +90,12 @@ class PlanetsViewController: UIViewController {
             let index = planetsTableView.indexPath(for: cell)!.row
             
             //3 - Je trouve le people dans le tabeau de people
-            let selectedHero = self.planetsArray[index]
+            let selectedPlanet = self.planetsArray[index]
             
-            //4 - et je le passe au hero detail view controller
+            //4 - et je le passe au planet detail view controller
             let destVC = segue.destination as! PlanetDetailViewController
             
-            destVC.planet = selectedHero //ICI QUE TOUT SE PASSE
+            destVC.planet = selectedPlanet //ICI QUE TOUT SE PASSE
         }
     }
 }
@@ -109,8 +109,8 @@ extension PlanetsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlanetCell", for: indexPath)
         
-        let people = planetsArray[indexPath.row]
-        cell.textLabel?.text = people.name
+        let planet = planetsArray[indexPath.row]
+        cell.textLabel?.text = planet.name
         
         return cell
     }
