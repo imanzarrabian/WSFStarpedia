@@ -102,18 +102,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAb-lv-WdS">
-                                <rect key="frame" x="16" y="357" width="168" height="30"/>
+                                <rect key="frame" x="16" y="357" width="204" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.037429042760000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.20796394065441937" green="0.12306378974339903" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Show hero's planet">
                                     <color key="titleColor" red="0.98657952500000001" green="1" blue="0.99282957979999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="planetToggleButton:" destination="haN-67-MHJ" eventType="touchUpInside" id="lc3-7x-rLm"/>
+                                    <action selector="togglePlanet:" destination="haN-67-MHJ" eventType="touchUpInside" id="vz9-d4-Pcl"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZK-3m-POM">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZK-3m-POM">
                                 <rect key="frame" x="16" y="403" width="343" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -196,6 +196,7 @@
                         <outlet property="planetOrbitalPeriodLabel" destination="gvl-OM-ngF" id="7fk-OO-jLZ"/>
                         <outlet property="planetRotationPeriodLabel" destination="QxH-g8-GeI" id="ZcC-3x-So4"/>
                         <outlet property="planetView" destination="XZK-3m-POM" id="OJ5-tr-dHc"/>
+                        <outlet property="togglePlanetButton" destination="PAb-lv-WdS" id="VZM-o1-SAa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrj-H1-oTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
