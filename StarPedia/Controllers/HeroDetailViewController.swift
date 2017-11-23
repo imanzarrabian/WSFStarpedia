@@ -22,7 +22,13 @@ class HeroDetailViewController: UIViewController {
     @IBOutlet weak var planetOrbitalPeriodLabel: UILabel!
     @IBOutlet weak var planetDiameterLabel: UILabel!
     
-    @IBAction func planetToggleButton(_ sender: Any) {
+    @IBOutlet weak var togglePlanetButton: UIButton!
+    
+    @IBAction func togglePlanet(_ sender: Any) {
+        togglePlanetButton.alpha = 0.3
+        togglePlanetButton.isEnabled = false
+        togglePlanetButton.setTitle("Loading...", for: .normal)
+        
         getPlanet(url: people.homeWorld)
     }
     
@@ -34,10 +40,11 @@ class HeroDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = people.name
         
-        // Hide planet's view
-        planetView.isHidden = true
+        // Bords arrondis pour le boutton planète
+        togglePlanetButton.layer.cornerRadius = 4
+        
+        title = people.name
         
         massLabel.text = people.mass + " Kg"
         heightLabel.text = people.height + " Cm"
@@ -69,6 +76,9 @@ class HeroDetailViewController: UIViewController {
     }
     
     func populateView() {
+        togglePlanetButton.setTitle("Loaded", for: .normal)
+
+        // Affiche le view controller pour la planète
         self.planetView.isHidden = false
         
         self.planetNameLabel.text = self.planet.name
