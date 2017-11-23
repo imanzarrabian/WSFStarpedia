@@ -104,7 +104,7 @@ class PlanetsViewController : UIViewController {
             //4 - et je le passe au hero detail view controller
             let destVC = segue.destination as! PlanetDetailViewController
             
-            destVC.planet = selectedPlanet //ICI QUE TOUT SE PASSE
+            destVC.planet = selectedPlanet 
         }
     }
 }
