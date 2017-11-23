@@ -28,6 +28,6 @@ class PlanetDetailViewController: UIViewController {
         diameterLabel.text = planet.diameter + " kilometres"
 
         let url = URL(string: planet.pictureURL)
-                pictureIV.kf.setImage(with: url)
+        pictureIV.kf.setImage(with: url)
     }
 }
