@@ -13,4 +13,6 @@ https://swapi.co
 Fork obligatoire de ce repo et pull request. 5 Forks au total.
 
 ## Teams :
-Un fichier Teams.md doit accompagner le projet avec les noms prénoms de chaque membre.
+**Victor Bléchet** **Nina Queuche**
+
+
