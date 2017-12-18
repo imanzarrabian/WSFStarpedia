@@ -155,28 +155,120 @@
                     </tabBar>
                     <connections>
                         <segue destination="rjW-Ol-3us" kind="relationship" relationship="viewControllers" id="Omu-sl-kZI"/>
-                        <segue destination="nz8-vQ-slh" kind="relationship" relationship="viewControllers" id="P7H-v9-3DS"/>
+                        <segue destination="OGz-af-0K8" kind="relationship" relationship="viewControllers" id="P7H-v9-3DS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jb6-6F-8uY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-559" y="230"/>
         </scene>
-        <!--Planets-->
+        <!--Planet View Controller-->
         <scene sceneID="Xyo-1M-TTC">
             <objects>
-                <viewController id="nz8-vQ-slh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UiR-Da-Cuh">
+                <viewController id="nz8-vQ-slh" customClass="PlanetViewController" customModule="StarPedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f2Q-WI-b04">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.59994419642857144" green="0.61964285714285716" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="bBo-8f-hhW"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dhU-KK-sXW" userLabel="Planets Table View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetCell" rowHeight="64" id="y8t-Yk-2S2" userLabel="PlanetsCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y8t-Yk-2S2" id="UmE-3O-qZM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="sav-Us-QcS" kind="show" identifier="PlanetsDetailVC" id="6PL-b1-Uz9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Tqs-p1-k5Q"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Planets" id="m8h-lX-rcL"/>
+                    <navigationItem key="navigationItem" id="zp7-3l-Gr1"/>
+                    <connections>
+                        <outlet property="PlanetsTableView" destination="dhU-KK-sXW" id="gHv-nO-Gau"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rh-hL-upj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="625"/>
+            <point key="canvasLocation" x="1428" y="622.93853073463276"/>
+        </scene>
+        <!--Planet Detail View Controller-->
+        <scene sceneID="plB-WY-3ax">
+            <objects>
+                <viewController id="sav-Us-QcS" customClass="PlanetDetailViewController" customModule="StarPedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jRB-jQ-UNw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diameter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amb-3w-KeA">
+                                <rect key="frame" x="20" y="304.5" width="87" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJi-HH-rea">
+                                <rect key="frame" x="20" y="344.5" width="86" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="nnE-Nu-UrE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-1E-zY8">
+                                <rect key="frame" x="123" y="306" width="47" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNp-te-I88">
+                                <rect key="frame" x="126" y="344.5" width="42" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCw-cj-7iy">
+                                <rect key="frame" x="0.0" y="82" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="pzn-mH-LPR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HNp-te-I88" firstAttribute="centerX" secondItem="yMZ-1E-zY8" secondAttribute="centerX" id="0pK-3z-x18"/>
+                            <constraint firstItem="yMZ-1E-zY8" firstAttribute="centerY" secondItem="Amb-3w-KeA" secondAttribute="centerY" id="27c-XI-O08"/>
+                            <constraint firstItem="Amb-3w-KeA" firstAttribute="top" secondItem="tCw-cj-7iy" secondAttribute="bottom" constant="20" id="68a-7x-cY5"/>
+                            <constraint firstAttribute="trailing" secondItem="tCw-cj-7iy" secondAttribute="trailing" id="9NI-uE-cx4"/>
+                            <constraint firstItem="tCw-cj-7iy" firstAttribute="top" secondItem="INB-QD-AIF" secondAttribute="top" constant="20.5" id="AnJ-Sx-D3a"/>
+                            <constraint firstItem="HNp-te-I88" firstAttribute="leading" secondItem="SJi-HH-rea" secondAttribute="trailing" constant="20" id="LwN-eJ-N3f"/>
+                            <constraint firstItem="SJi-HH-rea" firstAttribute="leading" secondItem="Amb-3w-KeA" secondAttribute="leading" id="Zax-L6-stp"/>
+                            <constraint firstItem="HNp-te-I88" firstAttribute="centerY" secondItem="SJi-HH-rea" secondAttribute="centerY" id="acq-Fu-WGJ"/>
+                            <constraint firstItem="Amb-3w-KeA" firstAttribute="leading" secondItem="INB-QD-AIF" secondAttribute="leading" constant="20" id="cPo-Go-v2r"/>
+                            <constraint firstItem="yMZ-1E-zY8" firstAttribute="leading" secondItem="Amb-3w-KeA" secondAttribute="trailing" constant="19" id="cpK-uw-5An"/>
+                            <constraint firstItem="tCw-cj-7iy" firstAttribute="leading" secondItem="jRB-jQ-UNw" secondAttribute="leading" id="f6o-V7-6SQ"/>
+                            <constraint firstItem="SJi-HH-rea" firstAttribute="top" secondItem="Amb-3w-KeA" secondAttribute="bottom" constant="16" id="xN4-OE-9XX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="INB-QD-AIF"/>
+                    </view>
+                    <connections>
+                        <outlet property="DiameterLabel" destination="yMZ-1E-zY8" id="q9j-uR-vZV"/>
+                        <outlet property="ImageDescription" destination="tCw-cj-7iy" id="UQR-Ql-o1X"/>
+                        <outlet property="PopulationLabel" destination="HNp-te-I88" id="bqc-jK-qea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abo-Rw-BSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272.8000000000002" y="622.93853073463276"/>
         </scene>
         <!--Persos-->
         <scene sceneID="Gx0-3k-Izx">
@@ -196,6 +288,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBe-zO-cso" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="577" y="-144"/>
+        </scene>
+        <!--Planets-->
+        <scene sceneID="4UP-ph-LVd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OGz-af-0K8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Planets" id="m8h-lX-rcL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aEz-wZ-t8b">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nz8-vQ-slh" kind="relationship" relationship="rootViewController" id="u9K-Vg-Qo4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQp-xf-5He" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576" y="624.28785607196403"/>
         </scene>
     </scenes>
 </document>
